@@ -1,0 +1,223 @@
+/*google font cdn*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins',sans-serif;
+}
+.banner{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	/*background: #444;*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.banner header{
+	position: relative;
+	height: 25.5vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+/*title*/
+.banner header .logo{
+	position: relative;
+	height: auto;
+	width: auto;
+	text-decoration: none;
+	font-size: 3.8rem;
+	color: #2980b9;
+	background: #f1c40f;
+	padding:10px 55px;
+	border-top: 5px solid #2980b9;
+	border-bottom: 5px solid #2980b9;
+	margin-bottom: 1%;
+	font-weight: 650;
+}
+/*menu*/
+.banner .menu{
+	position: relative;
+	top: 0;
+	height: 50px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #2c3e50;
+	z-index: 999999999999;
+}
+.banner .menu ul{
+	position: relative;
+	height: 100%;
+	width: 35%;
+	text-align: center;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	left: 10%;
+}
+.banner .menu ul li{
+	list-style-type: none;
+	display: inline-block;
+	height: inherit;
+	width: auto;
+}
+.banner .menu ul li a{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: inherit;
+	width: 100%;
+	text-decoration: none;
+	color: #fff;
+	padding: 0 15px;
+	font-weight: 550;
+	letter-spacing: 1px;
+}
+.banner .menu ul li a:hover,
+.banner .menu ul li.active a{
+	border-bottom:5px solid #26de81;
+	color: #26de81;
+}
+.banner .menu .userstatus{
+	position: relative;
+	color: #fff;
+	font-size: 1rem;
+	width: 30%;
+	font-weight: 550;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding:0px 15px;
+	letter-spacing: 2px;
+}
+.banner .menu .userstatus span{
+	color: #ff0;
+	font-size: 0.89rem;
+}
+.banner .menu .userstatus a{
+	text-decoration: none;
+	color: #fff;
+	margin:0 1.5%;
+	background: #017bf5;
+	padding:5px 15px;
+}
+.banner .menu .userstatus a:last-child{
+	background: #20bf6b;
+}
+/*calender*/
+.main {
+	position: relative;
+	height: 100%;
+	width:100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 25px 0 0 0;
+}
+/*calender*/
+.main .calender{
+	position: relative;
+	height: auto;
+	width: 750px;
+	/*background: #444;*/
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.9);
+}
+.main .calender .header{
+	position: relative;
+	height: 140px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #3498db;
+}
+.main .calender .header a{
+	position: relative;
+	text-decoration: none;
+	color: #fff;
+	font-size: 4.2rem;
+	margin:0 4%;
+}
+.main .calender .header a:hover{
+	color: rgba(0, 0, 0, 0.5);
+}
+.main .calender .header .date{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.main .calender .header .date h1{
+	position: relative;
+	font-size: 2.5rem;
+	font-weight: 700;
+	letter-spacing: 2px;
+	color: #fff;
+	text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+.main .calender .header .date p{
+	position: relative;
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: #fff;
+	text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+}
+.main .calender .days{
+	position: relative;
+	height: 30px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.main .calender .days p{
+	position: relative;
+	height: inherit;
+	width: auto;
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	background:#2980b9;
+	padding:15px 0;
+	font-size: 1.2rem;
+	letter-spacing: 1px;
+}
+.main .calender .dates{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(7,auto);
+}
+.main .calender .dates p{
+	position: relative;
+	text-align: center;
+	padding:10px 0;
+	color: #000;
+	font-size: 1.2rem;
+	font-weight: 500;
+	cursor: pointer;
+}
+.main .calender .dates p.prevDate,
+.main .calender .dates p.nextDate{
+	color: #666;
+}
+.main .calender .dates p:hover{
+	background: #ccc;
+}
+.main .calender .dates p.active{
+	background:#2980b9;
+	color: #fff;
+}

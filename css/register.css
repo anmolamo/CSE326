@@ -1,0 +1,115 @@
+/*google font cdn*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins',sans-serif;
+}
+.main{
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	background: #000;
+}
+.main h1{
+	position: relative;
+	font-size: 4.5rem;
+	text-transform: uppercase;
+	background:#000;
+	color: #fff;
+	padding: 10px 45px; 
+}
+.main h1:before{
+	position: absolute;
+	content: '';
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	height: 90%;
+	width: 95%;
+	border: 2px solid #fff;
+}
+.main h1:after{
+	position: absolute;
+	content: '';
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	height: 90%;
+	width: 98%;
+	border: 2px solid #26de81;
+}
+/*form*/
+.main form{
+	position: relative;
+	height: 500px;
+	width: 600px;
+	background: #000;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	padding:25px 55px;
+	border: 2px solid #fff;
+}
+.main form input{
+	position: relative;
+	width: 100%;
+	height: 40px;
+	padding:0 10px;
+	box-shadow: none;
+	outline: none;
+	border: 2px solid #fff; 
+	background: #000;
+	color: #fff;
+	font-size: 1.2rem;
+	font-weight: 550;
+	transition: 0.3s linear;
+	letter-spacing: 2px;
+}
+.main form input::placeholder{
+	color: #ccc;
+}
+.main form input:focus{
+	background: #fff;
+	box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 1);
+	color: #000;
+}
+.main form input:focus::placeholder{
+	color: #444;
+}
+.main form input[type="submit"]{
+	position: relative;
+	cursor: pointer;
+	color: #fff;
+	background: #000;
+	padding:20px;
+	line-height: 0rem;
+	font-size: 1.5rem;
+	transition: 0.2s linear;
+}
+.main form input[type="submit"]:hover{
+	color: #000;
+	background: #fff;
+	box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.5);
+}
+.main .back,
+.main .login{
+	position: absolute;
+	top: 5%;
+	left: 2%;
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.5rem;
+	border-bottom: 1px solid #fff;
+	border-top: 1px solid #fff;
+}
+.main .login{
+	left: 92%;
+}

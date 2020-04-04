@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>intreactive calender-- important days</title>
+	<!-- index.css -->
+	<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+	<!-- important days css -->
+	<link rel="stylesheet" type="text/css" href="../css/importantdays.css"/>
+</head>
+<body>
+	<div class="banner">
+		<header class="top-header">
+			<a href="../index.html" class="logo">
+					INTERACTIVE CALENDER
+			</a>
+			<!-- menu starts-->
+			<nav class="menu">
+				<ul class="navbar">
+					<li>
+						<a href="../index.html">Home</a>
+					</li>
+					<li>
+						<a href="remainder.html">Remainders</a>
+					</li>
+					<li class="active">
+						<a href="importdays.html">Important Dates</a>
+					</li>
+				</ul>
+				<div class="userstatus">
+					Welcome, <span>Guest</span>
+					<a href="login.html" class="login">Login</a><a href="register.html" class="register">Register</a>
+				</div>
+			</nav>
+			<!-- menu ends -->
+		</header>
+
+	</div>
+	<div class="main">
+		<h1>Important Dates</h1>
+		<div class="form">
+		Country:<select class="country">
+			<option value="uk">uk</option>
+			<option value="ind">ind</option>
+			<option value="usa">usa</option>
+			<option value="aus">aus</option>
+		</select>
+		Year:<input type="text" class="year" value="2019" disabled />
+		</div>
+		<table width="80%" style="margin-top: 2%;"></table>
+	</div>
+	<script>
+		let datas=[];
+		let i =1;
+		let table = document.querySelector('table');
+		datas+= '<tr><th>Sno.</th><th>Holiday Name</th><th>Day</th><th>Date</th></tr>';
+		table.innerHTML = datas;
+		fetch('https://holidayapi.com/v1/holidays?key=34fa9714-c827-4efe-bac5-44fe08266586&country=uk&year=2019').then(data =>{
+			return data.json();
+		}).then(finaldata=>{
+			finaldata.holidays.map(data=>{
+				
+				table.innerHTML +=`<tr><td>${i}</td><td>${data.name}</td><td>${data.weekday.date.name}</td><td>${data.date}</td></tr>`;
+				i++;
+			});
+		});
+
+		const selection = document.querySelector('select');
+		selection.onchange = e=>{
+			const country = e.target.value;
+			datas=[];
+			i =1;
+			datas+= '<tr><th>Sno.</th><th>Holiday Name</th><th>Day</th><th>Date</th></tr>';
+			table.innerHTML = datas;
+			fetch('https://holidayapi.com/v1/holidays?key=34fa9714-c827-4efe-bac5-44fe08266586&country='+country+'&year=2019').then(data =>{
+			return data.json();
+				}).then(finaldata=>{
+				finaldata.holidays.map(data=>{
+				
+					table.innerHTML +=`<tr><td>${i}</td><td>${data.name}</td><td>${data.weekday.date.name}</td><td>${data.date}</td></tr>`;
+				i++;
+				});
+			});
+		}
+		document.querySelector('.main').height = table.height * 50;
+	</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+.main{
+	display: flex;
+	flex-direction: column;
+}
+.main h1{
+	position: relative;
+	height: auto;
+	width: 100%;
+	font-size: 3.5rem;
+	text-align: center;
+	padding:5px 0;
+}
+.main .form{
+	position: relative;
+	display: flex;
+	width: 30%;
+	align-items: center;
+	justify-content: space-around;
+}
+.main {
+	position: relative;
+	width: 100%;
+	padding:25px 0;
+}
+.main table{
+	position: relative;
+	margin-top: 5%;
+	text-align: center;
+}
+.main table {
+	border-right: 5px solid #000;
+	border-left: 5px solid #000;
+	border-bottom: 5px solid #000;
+}
+.main table tbody:nth-child(1) tr{
+	background: #017bf5;
+	color: #fff;
+	font-size: 1.2rem;
+}
+.main table tbody:nth-child(1) th,
+.main table tr td{
+	padding: 10px 15px;
+}
+.main table tbody:nth-child(1):hover{
+	background: #017bf5;
+	color: #fff;
+}
+.main table tbody:hover{
+	cursor: pointer;
+	background: #ccc;
+}

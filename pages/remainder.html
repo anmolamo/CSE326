@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>interactive calender remainder</title>
+	<!-- remainder css-->
+	<link rel="stylesheet" type="text/css" href="../css/remainder.css"/>
+	<!-- homecss -->
+	<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+</head>
+<body>
+<div class="banner">
+		<header class="top-header">
+			<a href="../index.html" class="logo">
+				INTERACTIVE CALENDER
+			</a>
+			<!-- menu starts-->
+			<nav class="menu">
+				<ul class="navbar">
+					<li>
+						<a href="../index.html">Home</a>
+					</li>
+					<li class="active">
+						<a href="remainder.html">Remainders</a>
+					</li>
+					<li>
+						<a href="importdays.html">Important Dates</a>
+					</li>
+				</ul>
+				<div class="userstatus">
+					Welcome, <span>Guest</span>
+					<a href="login.html" class="login">Login</a><a href="register.html" class="register">Register</a>
+				</div>
+			</nav>
+			<!-- menu ends -->
+		</header>
+
+		<!-- remaider -->
+			<div class="side-bar">
+				<a href="#" class="active" title="add remainders" data-filter="add">Add Remainders</a>
+				<a href="#" title="today remainders" data-filter="today">Today Remainders</a>
+				<a href="#" title="remainders record" data-filter="record">Remainders Record</a>
+			</div>
+			<div class="data">
+				<div class="filter-data add active">
+						<h1>Add Remainder</h1>
+					<form class="remainder-add-form" id="remainder-add-form">
+						<input type="text" name="remainderAdd" placeholder="Enter your remainder..." />
+						<input type="date" name="remainderAddDate"/>
+						<input type="time" name="remainderAddTime"/>
+						<input type="submit" name="remainder-add-submit" form="remainder-add-form" value="Add" />
+					</form>
+				</div>
+				<div class="filter-data today">
+					<h1>Today Remainders</h1>
+					<table width="80%">
+					</table>
+				</div>
+				<div class="filter-data record">
+					<h1>Remainders Record</h1>
+					<table width="80%"></table>
+				</div>
+			</div>
+	</div>
+
+	<!-- script -->
+	<script src="../js/remainder.js" type="text/javascript"></script>
+	<script src="../js/userstatus.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+.side-bar{
+	position: sticky;
+	top: 0%;
+	left: 0;
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 999999;
+}
+.side-bar a{
+	position: relative;
+	display: block;
+	text-decoration: none;
+	flex: 1;
+	text-align: center;
+	padding:10px 0;
+	background: #000;
+	color: #fff;
+}
+.side-bar a.active,
+.side-bar a:hover{
+	background: #2980b9;
+}
+.data{
+	position: relative;
+	height:100vh;
+	width: 100%;
+}
+.data div{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.data div.add{
+	display: none;
+}
+.data div.add.active{
+	display: block;
+}
+.data h1{
+	position: relative;
+	height: auto;
+	width: 100%;
+	text-align: center;
+	padding:15px 0;
+	font-size: 4.5rem;
+	font-weight: 750;
+	color: #2980b9;
+	text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 0.99);
+	overflow: hidden;
+}
+.data h1::before{
+	position: absolute;
+	content: '';
+	left: -5%;
+	top: 50%;
+	transform: translateY(-50%) skewX(-45deg);
+	width: 32%;
+	height: 52%;
+	background: #26de81;
+	border-right: 30px solid #000;
+}
+.data h1::after{
+	position: absolute;
+	content: '';
+	right: -5%;
+	top: 50%;
+	transform: translateY(-50%) skewX(-45deg);
+	width: 32%;
+	height: 52%;
+	background: #26de81;
+	border-left: 30px solid #000;
+}
+.data form{
+	position: relative;
+	width: 30%;
+	height: 50%;
+	margin-top: 2%;
+	left: 50%;
+	transform: translate(-50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	padding:10px 25px;
+}
+.data form input{
+	position: relative;
+	height: 50px;
+	width: 100%;
+}
+.data form input[type="text"]{
+	border:none;
+	border-bottom: 2px solid #000;
+	padding:10px 5px;
+	box-shadow: none;
+	outline: none;
+	font-size: 1.2rem;
+	transition: 0.3s linear;
+}
+.data form input[type="text"]:focus,
+.data form input[type="date"]:focus,
+.data form input[type="time"]:focus{
+	border-color: #017bf5;
+}
+.data form input[type="date"],
+.data form input[type="time"]{
+	border:2px solid #000;
+	padding: 10px 15px;
+	-webkit-appearance:none !important;
+	outline: none;
+	cursor: pointer;
+	transition: 0.3s linear;
+}
+.data form input[type="submit"]{
+	cursor: pointer;
+}
+.data .today{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	display: none;
+	/*display: none;*/
+}
+.data .today h1::before,
+.data .today h1::after,
+.data .record h1::before,
+.data .record h1::after{
+	width: 25%;
+}
+.data .today.active{
+	display: block;
+}
+.data .today table,
+.data .record table{
+	position: relative;
+	margin-top: 5%;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+}
+.data .today table tr:nth-child(1),
+.data .record table tr:nth-child(1){
+	background: #017bf5;
+	color: #fff;
+	font-size: 1.2rem;
+}
+.data .today table tr:nth-child(1) th,
+.data .today table tr td,
+.data .record table tr:nth-child(1) th,
+.data .record table tr td{
+	padding: 10px 15px;
+}
+.data .today table tr:nth-child(1):hover,
+.data .record table tr:nth-child(1):hover{
+	background: #017bf5;
+}
+.data .today table tr:hover,
+.data .record table tr:hover{
+	cursor: pointer;
+	background: #ccc;
+}
+.data .record{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	display: none;
+	flex-direction: column;
+	/*display: none;*/
+}
+.data .record.active{
+	display: flex;
+}
